@@ -46,7 +46,7 @@
             <!-- left section  -->
             <div class="col-md-8">
                 <img src="images/news.png" alt="newsImage" class="newsHeadImg">
-                <a href="#" class="newsHeadA"><h3 class="newsHead">Ls Has bring new seed of rice </h3></a>
+                <a href="newsDetails.php" class="newsHeadA"><h3 class="newsHead">Ls Has bring new seed of rice </h3></a>
                 <p style="color:#2D5F2E">20 March, 2020</p>
 
                 <p class="newsHeadP">
@@ -154,9 +154,9 @@
             <!-- first card  -->
             <div class="col-md-4">
                 <div class="card newsCard" style="width: 100%;">
-                    <a href="" class=""><img class="card-img-top newscardImg" src="images/card.png" alt="Card image cap"></a>
+                    <a href="newsDetails.php" class="newscardImg"><img class="card-img-top" src="images/card.png" alt="Card image cap"></a>
                     <div class="card-body">
-                        <a href=""><h5 class="card-title">Head Line of the news goes here</h5></a>
+                        <a href="newsDetails.php" class="allnewsTitle"><h5 class="card-title">Head Line of the news goes here</h5></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         
@@ -167,9 +167,9 @@
             <!-- second card  -->
             <div class="col-md-4">
                 <div class="card newsCard" style="width: 100%;">
-                    <a href="" class=""><img class="card-img-top newscardImg" src="images/card.png" alt="Card image cap"></a>
+                    <a href="" class="newscardImg"><img class="card-img-top" src="images/card.png" alt="Card image cap"></a>
                     <div class="card-body">
-                        <a href=""><h5 class="card-title">Head Line of the news goes here</h5></a>
+                        <a href="" class="allnewsTitle"><h5 class="card-title">Head Line of the news goes here</h5></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         
@@ -180,9 +180,9 @@
             <!-- third card  -->
             <div class="col-md-4">
                 <div class="card newsCard" style="width: 100%;">
-                    <a href="" class=""><img class="card-img-top newscardImg" src="images/card.png" alt="Card image cap"></a>
+                    <a href="" class="newscardImg"><img class="card-img-top" src="images/card.png" alt="Card image cap"></a>
                     <div class="card-body">
-                        <a href=""><h5 class="card-title">Head Line of the news goes here</h5></a>
+                        <a href="" class="allnewsTitle"><h5 class="card-title">Head Line of the news goes here</h5></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         

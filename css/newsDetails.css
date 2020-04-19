@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding:0;
+}
+.headSearch{
+    margin-top: 50px;
+}
+.mainNewsDetail{
+    margin-top: 30px;
+}
+.mainNewsDetailImg{
+    float: left;
+    padding-right: 40px;
+}
+.mainNewsDetailHeading{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.mainNewsDetailP{
+    magin-top:20px;
+}
+
+#fb_share{
+    background-color: #006699;
+    color: white;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.moreNews{
+    margin-top: 40px;
+}
+.cardRow{
+    margin-top: 30px;
+}
+.card{
+    margin-top: 20px;
+}
+.card-title{
+    color: #2D5F2E;
+    text-decoration: none;
+    font-size: xx-large;
+}
+.allnewsTitle:hover{
+    text-decoration: none;
+}
