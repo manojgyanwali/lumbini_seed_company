@@ -1,3 +1,15 @@
+<?php 
+session_start();
+include('includes/dbcon.php');
+$product_id= $_REQUEST['product_id'];
+$_SESSION['products']=$product_id;
+ 
+
+$qry="select  *from product_portfolio where id=$product_id";
+$result=$conn->query($qry);
+$data=$result->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,26 +64,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                   <img src="images/myimage.jpg" alt="" style="width:70%"> 
+                   <img  src="product_portfolio_image/<?php echo $data['product_image']; ?>"  alt="" style="width:70%"> 
                 </div>
 
                 <div class="col-md-6">
                     <div class="productTitle">
-                        <h2 ><b>Name of Product</b></h2>
-                        <h6 style="float:right;">Status :  <i class="availableText">Available</i></h6>
+                        <h2 ><b><?php echo $data['product_name'];?></b></h2>
+                        <h6 style="float:right;">Status:<i class="availableText">Available</i></h6>
+                    </div>
+                <form action="quantity.php" method="POST">
+                    <p><i class="categoryName"><?php echo $data['category_name']; ?></i></p>
+                    <div class="priceAndOrder">
+                        <h1 class="priceText"><b >Rs. <?php echo $data['price_of_product']; ?> per kg<b></h1>
+                        <h3 style="float:left; margin-right:20px;">Quantity</h3>
+                        
+                        <input type="text" name="quantity" class="col-md-2 form-control" >
+                       
+
+                        
                     </div>
                     
-                    <p><i class="categoryName">Category Name</i></p>
-                    <div class="priceAndOrder">
-                        <h1 class="priceText"><b >Rs. 250 per kg<b></h1>
-                        <h3 style="float:left; margin-right:20px;">Quantity</h3>
-                        <input type="text" class="col-md-2 form-control" >
-                    </div>
-
                     <div class="OrderButton">
-                        <a href="productDetailsConfirmOrder.php"><button class="btn btnOrder">Order Now</button></a>
-                        <a href="productDetailsConfirmOrder.php"><button class="btn btnCart">Add to Cart</button></a>
+                        <button type="submit" class="btn btnOrder">Order Now</button>
+                        <button type="submit"class="btn btnCart">Add to Cart</button>
                     </div>
+                   
+                <form> 
+               
                 </div>
 
             </div>
@@ -84,8 +103,7 @@
                 <div class="col-md-6">
                     <h3>Product Description</h3>
                     <p class="productDecription">
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
+                    <?php echo $data['product_description'];?>
 
                     </p>
                 </div>
@@ -94,10 +112,10 @@
                     <h3>Product specification</h3>
                     <h6>PRODUCT CODE : PT202</h6>
                         <ul class="productSpecsList">
-                            <li>Lorem ipsum is simple a dummy text that is used for</li>
-                            <li>Lorem ipsum is simple a dummy text that is used for dummy text that is used for</li>
-                            <li>Lorem ipsum is simple a dummy text that is used for</li>
-                            <li>Lorem ipsum is simple a dummy text that is used for</li>
+                            <li><?php echo $data['product_specification']; ?></li>
+                            <li><?php echo $data['product_specification']; ?></li>
+                            <li><?php echo $data['product_specification']; ?></li>
+                            <li><?php echo $data['product_specification']; ?></li>
                         </ul>
 
                 </div>

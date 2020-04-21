@@ -1,3 +1,30 @@
+<?php 
+session_start();
+include('includes/dbcon.php');
+
+$quantity= $_SESSION['quantities'];
+$product_id=$_SESSION['products'];
+
+
+
+
+
+$qry="select *from product_portfolio where id='$product_id' ";
+ $result=$conn->query($qry);
+ if($result->rowCount()>0)
+{
+ $data=$result->fetch(PDO::FETCH_ASSOC);
+}
+
+
+                         
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,19 +94,19 @@
                                 <p><i>Category of product</i></p>
                             </td>
                             <td width="20%">Rs 250 per KG</td>
-                            <td width="20%">12 KG</td>
+                            <td width="20%">45 kg</td>
                         </tr>
                     </table>
 
                     <table style="width:100%; margin-top:20px;">
                         <tr class="tableItems">
                             <td class="firstTD" width="60%"> 
-                                <img src="images/myimage.jpg" alt="" style="width:20%; float:left; margin-right:20px;">
-                                <h5>Name of Product</h5>
-                                <p><i>Category of product</i></p>
+                                <img src="product_portfolio_image/<?php echo $data['product_image']; ?>" alt="" style="width:20%; float:left; margin-right:20px;">
+                                <h5><?php echo $data['product_name'];?></h5>
+                                <p><i><?php echo $data['category_name'];?></i></p>
                             </td>
                             <td width="20%">Rs 250 per KG</td>
-                            <td width="20%">12 KG</td>
+                            <td width="20%"><?php echo $quantity ?> KG</td>
                         </tr>
                     </table>
 
@@ -90,17 +117,29 @@
                     <div class="confirmCard">
                         <h4><B>ORDER CONFIRMATION</B></h4>
 
-                        <form action="" class="form-group confirmForm">
+                        <form action="order_confirmation.php" method="POST" class="form-group confirmForm">
                             <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" placeholder="Enter the name for order">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter the name for order">
                             <label for="address">Address</label>
-                            <input type="text" id="address" class="form-control" placeholder="Enter the address for order">
+                            <input type="text" id="address" name="address" class="form-control" placeholder="Enter the address for order">
                             <label for="phone">Phone Number</label>
-                            <input type="text" id="phone" class="form-control" placeholder="Enter the phone number for order">
+                            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter the phone number for order">
                             <label for="Email">Email address</label>
-                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-                            <button class="btn btnConfirm"> Confirm Order</button>
+                            <input type="email" class="form-control" id="Email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <button type="submit" name="submit" class="btn btnConfirm"> Confirm Order</button>
                         </form>
+                        <?php
+                        if(isset($_REQUEST['submit']))
+                         {
+                            
+                            
+                                echo "manoj";
+                            
+                        }
+                            
+                        ?>  
+                            
+                        
                         
                         
                     </div>

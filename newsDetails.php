@@ -1,3 +1,8 @@
+<?php
+$id=$_REQUEST['news_id'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,7 @@
     
 <!-- header section  -->
 
-<?php include('header.html') ?>
+<?php include('header.html');?>
 
 <!-- head with search section  -->
 
@@ -37,14 +42,20 @@
 </div>
 
 <!-- MAIN NEWS DETAILS SECTION  -->
+<?php 
+include('includes/dbcon.php');
+$qry="select *from news_and_events where id=$id";
+$result=$conn->query($qry);
+$data=$result->fetch(PDO::FETCH_ASSOC);
+?>
 
 <div class="mainNewsDetail">
     <div class="container">
         <div class="newsSection">
-            <img src="images/news.png" alt="mains news detail image" class="mainNewsDetailImg">
-                <h3 class="mainNewsDetailHeading">Ls has brought new seed of rice</h3>
+            <img src="news_and_events_images/<?php echo  $data['image']?>" alt="mains news detail image" class="mainNewsDetailImg">
+                <h3 class="mainNewsDetailHeading"><?php echo  $data['title']?></h3>
                 <p class="date">18 March, 2020</p>
-                <p class="mainNewsDetailP">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                <p class="mainNewsDetailP"><?php echo  $data['description']?></p>
         </div>
 
         <div class="shareSection">
