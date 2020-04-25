@@ -19,7 +19,7 @@ include('includes/sidebar.php');
             ?>
                         <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#lkdlajlkf"><?php echo $data['product_name'];   ?></a>
+                            <a class="nav-link" href="#lkdlajlkf"><?php echo $data['title'];   ?></a>
                         </li>
                       </ul>
                       <span ><a href="edit_post.php ? product_id=<?php echo $data['id'];?>">EDIT</a> |  <a href="delete_post.php">DELETE</a> </span>

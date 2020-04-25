@@ -112,10 +112,10 @@ $data=$result->fetch(PDO::FETCH_ASSOC);
                     <h3>Product specification</h3>
                     <h6>PRODUCT CODE : PT202</h6>
                         <ul class="productSpecsList">
-                            <li><?php echo $data['product_specification']; ?></li>
-                            <li><?php echo $data['product_specification']; ?></li>
-                            <li><?php echo $data['product_specification']; ?></li>
-                            <li><?php echo $data['product_specification']; ?></li>
+                            <li><?php echo $data['product_specification1']; ?></li>
+                            <li><?php echo $data['product_specification2']; ?></li>
+                            <li><?php echo $data['product_specification3']; ?></li>
+                            <li><?php echo $data['product_specification4']; ?></li>
                         </ul>
 
                 </div>

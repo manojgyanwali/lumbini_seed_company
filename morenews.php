@@ -1,10 +1,9 @@
-<?php
+<?php 
 session_start();
-$id=$_REQUEST['news_id'];
-//$news_id=$_REQUEST['news_id'];
+$neewsid=$_REQUEST['newsid'];
+
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +45,7 @@ $id=$_REQUEST['news_id'];
 <!-- MAIN NEWS DETAILS SECTION  -->
 <?php 
 include('includes/dbcon.php');
-$qry="select *from news_and_events where id=$id";
+$qry="select *from news_and_events where id=$neewsid";
 $result=$conn->query($qry);
 $data=$result->fetch(PDO::FETCH_ASSOC);
 ?>
@@ -88,7 +87,7 @@ $data=$result->fetch(PDO::FETCH_ASSOC);
      ?>
         <div class="col-md-4">
                 <div class="card newsCard" style="width: 100%;">
-                        <a href="morenews.php? newsid=<?php echo $data2['id'];?>"  class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data2['image'];?>" alt="Card image cap"></a>
+                    <a href="morenews.php? newsid=<?php echo $data2['id']; ?>"  class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data2['image'];?>" alt="Card image cap"></a>
                     <div class="card-body">
                         <a href="morenews.php? newsid=<?php echo $data2['id'];?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data2['title'];?></h5></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>

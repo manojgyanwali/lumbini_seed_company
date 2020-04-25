@@ -54,14 +54,13 @@
             ?>
             <div class="col-md-8">
                 <img src="news_and_events_images/<?php echo $data['image']; ?>" alt="newsImage" class="newsHeadImg">
-                <a href="newsDetails.php" class="newsHeadA"><h3 class="newsHead"><?php echo $data['title']; ?> </h3></a>
+                <a href="newsDetails.php ? news_id=<?php echo $data['id'] ?>" class="newsHeadA"><h3 class="newsHead"><?php echo $data['title']; ?> </h3></a>
                 <p style="color:#2D5F2E">20 March, 2020</p>
-
                 <p class="newsHeadP"><?php echo  $data['description']; ?> </p>
-
                 <a href="#" class="continueLink"><h5>Continue Reading....</h5></a>
             </div>
             <div class="col-md-4">
+            <h3>Recent news</h3>
            
             <?php 
             $qry2="select *from news_and_events order by id desc limit 3";
@@ -73,10 +72,10 @@
                
                 <div class="row" style="margin-top:20px;">
                     <div class="col-md-4 col-sm-6 col-xm-6">
-                        <a href=""><img src="news_and_events_images/<?php echo $data2['image'];?>" alt="sub news Img" class="subHeadImg"></a>
+                        <a href="newsDetails.php ?news_id=<?php echo $data2['id']; ?>"><img src="news_and_events_images/<?php echo $data2['image'];?>" alt="sub news Img" class="subHeadImg"></a>
                     </div>
                     <div class="col-md-8 col-sm-6 col-xm-6">
-                        <a href="#" class="subNewsHeadA"><h6 class="subNewsHead"><?php echo $data2['title']; ?></h6></a>
+                        <a href="newsDetails.php ?news_id=<?php echo $data2['id']; ?>" class="subNewsHeadA"><h6 class="subNewsHead"><?php echo $data2['title']; ?></h6></a>
                         <p>18 March, 2020</p>
                     </div>
                 </div>
@@ -96,24 +95,18 @@
     <div class="container">
 
         <h4 class="allNewsHead"> All News</h4>
-
-       
-
-        <!-- second row  -->
-        <div class="row cardRow">
-            <!-- first card  -->
-            <?php 
-            $qry3="select *from news_and_events order by id";
-            $result3=$conn->query($qry3);
-
-           while($data3=$result3->fetch(PDO::FETCH_ASSOC))
-           {                 
-            ?>   
+            <div class="row cardRow">
+                <?php 
+                    $qry3="select *from news_and_events order by id";
+                    $result3=$conn->query($qry3);
+                    while($data3=$result3->fetch(PDO::FETCH_ASSOC))
+                    {                 
+                ?>   
             <div class="col-md-4">
                 <div class="card newsCard" style="width: 100%;">
-                    <a href="newsDetails.php ? news_id=<?php echo $data3['id']; ?>" class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data3['image'];?> " alt="Card image cap"></a>
+                    <a href="newsDetails.php? news_id=<?php echo $data3['id'];?>" class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data3['image'];?> " alt="Card image cap"></a>
                     <div class="card-body">
-                        <a href="newsDetails.php ? news_id=<?php echo $data3['id']; ?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data3['title'];?></h5></a>
+                    <a href="chectnewsdetails.php? news_id=<?php echo $data3['id'];?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data3['title'];?></h5></a>
                         <p class="date" style="color:#2d5f2e">18 March, 2020</p>
                         <p class="card-text"><?php echo $data['description'];?></p>
                         
@@ -122,9 +115,9 @@
             </div>
 
            
-            <?php 
-           }
-            ?>
+                <?php 
+                    }
+                ?>
             
             
 
