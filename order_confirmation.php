@@ -17,13 +17,17 @@ $email=$_REQUEST['email'];
     $result=$conn->exec($qry);
     if($result>0)
     {
+        $message= "order has been confirmed";
+        $_SESSION['message']=$message;
        header('location:productDetailsConfirmOrder.php');
+
     }
     
 
     else
     {
         echo "DATA IS NOT INSERTED";
+       
     }
        
     

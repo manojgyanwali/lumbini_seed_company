@@ -22,7 +22,7 @@
                             <a class="nav-link" href="#lkdlajlkf"><?php echo $data['product_name'];   ?></a>
                         </li>
                       </ul>
-                      <span ><a href="edit_post.php ? product_id=<?php echo $data['id'];?>">EDIT</a> |  <a href="delete_post.php ? product_id=<?php echo $data['id'];?>">DELETE</a> </span>
+                      <span ><a href="edit_post.php ? product_id=<?php echo $data['id'];?>">EDIT</a> |  <a  onclick=" return myfun();" href="delete_post.php ? product_id=<?php echo $data['id'];?>">DELETE</a> </span>
                     
         
                   
@@ -61,9 +61,9 @@
         
 </div>
 </div>
-    <form action="add_product_portfolio.php" method="POST">
+    <form  action="add_product_portfolio.php" method="POST" >
    
-    <button type="submit" name="add" class="btn btn-danger btn-lg" style="margin-right:500px;">ADD</button>
+    <button  type="submit"  name="add" class="btn btn-danger btn-lg" style="margin-right:500px;">ADD</button>
 
     </forms>
     <!-- main content area end -->
@@ -72,3 +72,24 @@
 <?php
     include('includes/footer.php');
 ?>
+<script>
+function myfun()
+{
+  //alert("hellow");
+
+  var con=confirm("sure want to delete");
+  if (con==true)
+  {
+    window.open("delete_post.php");
+    return true;
+  }
+  else
+  {
+      alert("data is not deleted");
+      return false;
+  }
+ 
+
+}
+
+</script>

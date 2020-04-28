@@ -49,7 +49,11 @@
                     
                     <textarea name="ckeditor" placeholder="add your content here" id="ckeditor" class="ckeditor"><?php echo $data['product_description'];?></textarea>
                     
-                    <textarea  name="product_specification" placeholder="product_specification"><?php echo $data['product_specification'];?></textarea></br>
+                    
+                    <textarea  name="product_specification1" placeholder="product_specification1"><?php echo $data['product_specification1'];?></textarea></br>
+                    <textarea  name="product_specification2" placeholder="product_specification2"><?php echo $data['product_specification2'];?></textarea></br>
+                    <textarea  name="product_specification3" placeholder="product_specification3"><?php echo $data['product_specification3'];?></textarea></br>
+                    <textarea  name="product_specification4" placeholder="product_specification4"><?php echo $data['product_specification4'];?></textarea></br>
                     <textarea  name="price_of_product" placeholder="price_of_product"><?php echo $data['price_of_product'];?></textarea>
                     
                     <input type="submit" name="update" value="update"></br>

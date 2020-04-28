@@ -55,9 +55,9 @@
             <div class="col-md-8">
                 <img src="news_and_events_images/<?php echo $data['image']; ?>" alt="newsImage" class="newsHeadImg">
                 <a href="newsDetails.php ? news_id=<?php echo $data['id'] ?>" class="newsHeadA"><h3 class="newsHead"><?php echo $data['title']; ?> </h3></a>
-                <p style="color:#2D5F2E">20 March, 2020</p>
+                <p style="color:#2D5F2E"><?php echo $data['date']?></p>
                 <p class="newsHeadP"><?php echo  $data['description']; ?> </p>
-                <a href="#" class="continueLink"><h5>Continue Reading....</h5></a>
+                <a href="newsDetails.php ? news_id=<?php echo $data['id'] ?>" class="continueLink"><h5>Continue Reading....</h5></a>
             </div>
             <div class="col-md-4">
             <h3>Recent news</h3>
@@ -106,8 +106,8 @@
                 <div class="card newsCard" style="width: 100%;">
                     <a href="newsDetails.php? news_id=<?php echo $data3['id'];?>" class="newscardImg"><img class="card-img-top" src="news_and_events_images/<?php echo $data3['image'];?> " alt="Card image cap"></a>
                     <div class="card-body">
-                    <a href="chectnewsdetails.php? news_id=<?php echo $data3['id'];?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data3['title'];?></h5></a>
-                        <p class="date" style="color:#2d5f2e">18 March, 2020</p>
+                    <a href="newsDetails.php? news_id=<?php echo $data3['id'];?>" class="allnewsTitle"><h5 class="card-title"><?php echo $data3['title'];?></h5></a>
+                        <p class="date" style="color:#2d5f2e"><?PHP echo $data3['date'] ;?></p>
                         <p class="card-text"><?php echo $data['description'];?></p>
                         
                     </div>
