@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashbaordNav.css">
+</head>
+<body>
+
+    <div class="dashboardNav">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 leftDiv">
+                    <div class="lscContent">
+                        <img src="/images/Logo.png" style="float: left; margin-right: 12px;" alt="logo">
+                        <h5 style="font-weight: bold;"> Lumbini Seed Company</h5>
+                    </div>
+                    <div class="nav navContent">
+                        <ul>
+                            <li><a href="#" class="active"><i class="fa fa-home">   Home</i></a></li>
+                            <li><a href="#"><i class="fa fa-building">    Company's profile</i></a></li>
+                            <li><a href="productPortfolio.php"><i class="fa fa-seedling">  Product Portfolio</i></a></li>
+                            <li><a href="#"><i class="fa fa-network-wired">   Distrubution Network</i></a></li>
+                            <li><a href="#"><i class="fa fa-newspaper">  News & Event</i></a></li>
+                            <li><a href="#"><i class="fa fa-accessible-icon">  Career Opportunity</i></a></li>
+                            <li><a href="#"><i class="fa fa-address-book"></i>  Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 topDiv">
+                    <div class="topSection">
+                        
+                            <form action="product_search.php" method="POST">
+                                <div class="input-group mb-3" id="searchSection">
+                                    <input type="text" name="search_box" class="form-control col-md-6 offset-md-3" placeholder="What are you looking for?">
+                                    <div class="input-group-prepend">
+                                        <button type="submit" class="input-group-text btn-info" name="search" id="search"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

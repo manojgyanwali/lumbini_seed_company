@@ -1,0 +1,34 @@
+.myTabs{
+    margin-top: 40px;
+}
+.categories{
+    margin-top: 30px;
+}
+.addBTN{
+    margin-top: 20px;
+    padding: 10px 40px;
+}
+.elements{
+    margin-top: 10px;
+}
+.trHeadProduct{
+    width: 100%;
+}
+.viewProductTable{
+    width: 100%;
+    margin-top: 10px;
+}
+.trHead{
+    background-color:#F3F3F3;
+}
+.trHead td{
+    padding: 10px 20px;
+}
+
+.trProducts{
+    margin-top: 20px;
+    background-color: #F3F3F3;
+}
+.trProducts td{
+    padding: 10px 20px;
+}

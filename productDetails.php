@@ -46,15 +46,12 @@ $data=$result->fetch(PDO::FETCH_ASSOC);
                 </div>
     
                 <div class="col-md-4">
-                    <form action="product_search.php" method="POST">
-                        <div class="input-group mb-3" id="searchSection">
-                            <input type="text" name="search_box" class="form-control" placeholder="What are you looking for?">
-                            <div class="input-group-prepend">
-                                <button type="submit" class="input-group-text" name="search" id="search"><i class="fa fa-search"></i></button>
-                            </div>
+                    <div class="input-group mb-3" id="searchSection">
+                        <input type="text" class="form-control" placeholder="What are you looking for?">
+                        <div class="input-group-prepend">
+                           <button class="input-group-text" id="search"><i class="fa fa-search"></i></button>
                         </div>
-                    </form>
-                    
+                      </div>
     
                 </div>
             </div>

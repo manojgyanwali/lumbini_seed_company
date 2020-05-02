@@ -11,6 +11,7 @@
 .mainNewsDetailImg{
     float: left;
     padding-right: 40px;
+    max-width: 60%;
 }
 .mainNewsDetailHeading{
     text-transform: uppercase;
@@ -44,4 +45,7 @@
 }
 .allnewsTitle:hover{
     text-decoration: none;
+}
+.newsCard{
+    
 }

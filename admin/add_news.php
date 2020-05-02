@@ -40,8 +40,6 @@
         {
             $title=$_REQUEST['title'];
             $product_description=$_REQUEST['ckeditor'];
-            
-
 
             
             $tempnames=$_FILES['file']['tmp_name'];
@@ -55,8 +53,8 @@
                
                 move_uploaded_file($tempnames,"../news_and_events_images/".$imagenames);
              
-                $qry="insert into news_and_events (image,title,description,date)
-                value('$imagenames','$title','$product_description',NOW())";
+                $qry="insert into news_and_events (image,title,description)
+                value('$imagenames','$title','$product_description')";
                 $result= $conn->query($qry);
                
                

@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+.dashboardNav{
+    height: 100vh;
+    max-width: 100%;
+}
+
+.leftDiv{
+    background-color: #2D5F2E;
+    color: white;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.lscContent{
+    background-color: #1A4A1B;
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+    
+}
+.navContent{
+    color: white;
+    padding-left: 20px;
+    margin-top: 40px;
+}
+.navContent ul li{
+    text-decoration: none;
+    list-style-type: none;
+    padding: 14px 0;
+}
+
+.navContent ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.navContent ul li a:hover{
+    background-color: #1A4A1B;
+    padding: 10px;
+    transition: all 0.5s;
+}
+
+.topDiv{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    background: #F2F2F2;
+}

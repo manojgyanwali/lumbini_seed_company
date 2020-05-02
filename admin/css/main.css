@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-height: 100vh;
+    color: white;
+}
+.adminMain{
+    background-color:#247ba0;
+    border-radius: 12px;
+    margin-top: 5%;
+    padding: 10% 5%;
+}
+.lsc{
+    text-align: center;
+}
+.logo{
+    float: left;
+
+}
+.welcomeText{
+    text-align: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+.login{
+    font-weight: bold;
+    margin-top: 20px;
+}
+.loginBtn{
+    width: 100px;
+    margin-top: 20px;
+    border: solid 2px white;
+    background: #247ba0;
+}
+
+.loginBtn:hover{
+    background: white;
+    color: #247ba0;
+}

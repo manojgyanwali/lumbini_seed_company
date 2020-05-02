@@ -66,7 +66,12 @@
     box-shadow: 0 0 4px 0;
     border: none;
     margin-top: 20px;
+    padding-bottom: 10px;
 }
+.mytitle{
+    font-size: 20px;
+}
+
 
 .card-img-top{
     border-radius: 10px 10px 0 0;
@@ -76,6 +81,7 @@
     text-decoration: none;
     font-size: xx-large;
 }
+
 .allnewsTitle:hover{
     text-decoration: none;
 }
